@@ -9,10 +9,12 @@
     <script>
   AFRAME.registerComponent('cloak', {
      init: function() {
-       var geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
-       var material = new THREE.MeshBasicMaterial( {colorWrite: false} );
-       var cube = new THREE.Mesh( geometry, material );
-       this.el.object3D.add( cube );
+       const loader = new GLTFLoader();
+       const geometry = await loader.loadAsync( 'https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb' );
+       //var geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
+       var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+       var mask = new THREE.Mesh( geometry, material );
+       this.el.object3D.add( mask );
      }
   });
     </script>
@@ -26,12 +28,12 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
         <a-entity cloak position=" 0 0 0.3" render-order="mask"></a-entity>
-        <a-gltf-model rotation="90 0 0 " position=" 0 0 0" scale="0.1 0.1 0.1" src="#pondMask" render-order="mask"></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position=" 0 0 0" scale="0.1 0.1 0.1" src="#pondModel" animation-mixer="loop:repeat" material="transparent: 0; opacity: 1" render-order="main"></a-gltf-model>    
       </a-entity>
     </a-scene>
   </body>
 </html>
+
 
 
 
