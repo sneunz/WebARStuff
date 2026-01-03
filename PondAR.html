@@ -9,7 +9,7 @@
     <script>
   AFRAME.registerComponent('cloak', {
      init: function() {
-       var geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+       var geometry = new THREE.BoxGeometry( 1.5, 1.5, 1.5 );
        var material = new THREE.MeshBasicMaterial( {colorWrite: false} );
        var cube = new THREE.Mesh( geometry, material );
        this.el.object3D.add( cube );
@@ -31,6 +31,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
