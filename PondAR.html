@@ -5,7 +5,18 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   </head>
-  <body>
+  <body>    
+    
+AFRAME.registerComponent('cloak', {
+   init: function() {
+     var geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+     var material = new THREE.MeshBasicMaterial( {colorWrite: false} );
+     var cube = new THREE.Mesh( geometry, material );
+     this.el.object3D.add( cube );
+   }
+})
+
+  
     <a-scene mindar-image="imageTargetSrc: https://sneunz.github.io/WebARStuff/FileStorage/ImageTargets/hitchhikers_target.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" render-order="mask, main">
       <a-assets>
         <a-asset-item id="pondModel" src="https://sneunz.github.io/WebARStuff/FileStorage/Pond_w_Fish.glb"></a-asset-item>
@@ -15,11 +26,12 @@
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane rotation="0 0 0 " position="0.1 0.1 0.1" scale="0.3 0.3 0.3" material="transparent: 0; opacity: 0.2" render-order="mask"></a-plane>
         <a-plane rotation="0 0 0 " position="0 0 0" scale="0.6 0.6 0.6" material="transparent: true; opacity: 0.9" render-order="main"></a-plane>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="loop:repeat" src="#pondModel" material="shader: flat; transparent: true; opacity: 0.9"></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="loop:repeat" src="#pondModel" material="shader: flat; alphaTest: 0.5; transparent: true; opacity: 0.9"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
 </html>
+
 
 
 
