@@ -19,6 +19,7 @@
     <a-scene mindar-image="imageTargetSrc: https://sneunz.github.io/WebARStuff/FileStorage/ImageTargets/hitchhikers_target.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" render-order="mask, main">
       <a-assets>
         <a-asset-item id="pondModel" src="https://sneunz.github.io/WebARStuff/FileStorage/Pond_NoAnim.glb"></a-asset-item>
+        <a-asset-item id="pondShadow" src="https://sneunz.github.io/WebARStuff/FileStorage/Pond_NoAnim_shadow.glb"></a-asset-item>
         <a-asset-item id="pondMask" src="https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb"></a-asset-item>
         <a-asset-item id="testSphere" src="https://sneunz.github.io/WebARStuff/FileStorage/TestSphere.glb"></a-asset-item>
       </a-assets>
@@ -27,10 +28,12 @@
         <a-entity cloak render-order="mask"></a-entity>
         <a-plane rotation="0 0 0 " position="0 0 0" scale="0.6 0.6 0.6" material="transparent: true; opacity: 0.9" render-order="main"></a-plane>
         <a-gltf-model rotation="90 0 0 " position=" 0 0 0" scale="0.1 0.1 0.1" src="#pondModel" material="transparent: 0; opacity: 0.8" render-order="main"></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position=" 0 0 0" scale="0.1 0.1 0.1" src="#pondShadow" material="transparent: 0; opacity: 0.8" render-order="main"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
 </html>
+
 
 
 
