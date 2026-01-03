@@ -6,17 +6,16 @@
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   </head>
   <body>    
-    
-AFRAME.registerComponent('cloak', {
-   init: function() {
-     var geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
-     var material = new THREE.MeshBasicMaterial( {colorWrite: false} );
-     var cube = new THREE.Mesh( geometry, material );
-     this.el.object3D.add( cube );
-   }
-})
-
-  
+    <script>
+  AFRAME.registerComponent('cloak', {
+     init: function() {
+       var geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+       var material = new THREE.MeshBasicMaterial( {colorWrite: false} );
+       var cube = new THREE.Mesh( geometry, material );
+       this.el.object3D.add( cube );
+     }
+  });
+    </script>
     <a-scene mindar-image="imageTargetSrc: https://sneunz.github.io/WebARStuff/FileStorage/ImageTargets/hitchhikers_target.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" render-order="mask, main">
       <a-assets>
         <a-asset-item id="pondModel" src="https://sneunz.github.io/WebARStuff/FileStorage/Pond_w_Fish.glb"></a-asset-item>
@@ -31,6 +30,7 @@ AFRAME.registerComponent('cloak', {
     </a-scene>
   </body>
 </html>
+
 
 
 
