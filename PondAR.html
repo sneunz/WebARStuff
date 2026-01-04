@@ -9,7 +9,7 @@
     <script>
   AFRAME.registerComponent('cloak', {
      init: function() {
-       const loader = new THREE.GLTFLoader();
+       var loader = new THREE.GLTFLoader();
        const geometry = loader.load( 'https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb' );
        //var geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
        var material = new THREE.MeshBasicMaterial();
@@ -33,6 +33,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
