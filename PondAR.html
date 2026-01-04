@@ -9,10 +9,13 @@
     <script>
   AFRAME.registerComponent('cloak', {
      init: function() {
+       console.log("cloak function initiated!");
        this.el.addEventListener("model-loaded", (e)=>{
          var obj = this.el.getObject3D('mesh');
          var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
          this.el.getObject3D('mesh').material = maskMat;
+         console.log("object found!");
+         console.log(obj);
       })
      }
   });
@@ -33,6 +36,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
