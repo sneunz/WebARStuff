@@ -10,7 +10,7 @@
   AFRAME.registerComponent('cloak', {
      init: function() {
        const loader = new GLTFLoader();
-       const geometry = await loader.loadAsync( 'https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb' );
+       const geometry = loader.load( 'https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb' );
        //var geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
        var material = new THREE.MeshBasicMaterial();
        var mask = new THREE.Mesh( geometry, material );
