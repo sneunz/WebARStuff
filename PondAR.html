@@ -11,28 +11,34 @@
      init: function() {
        console.log("cloak function initiated!");
        let loader = new THREE.GLTFLoader();
-       loader.load('https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb', (gltf) => {
-         let GLFTRoot = gltf.scene;
-         console.log("gltf scene file!");
-         console.log(GLTFRoot);
-         var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
-          });
+       //loader.load('https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb', (gltf) => {
+         //let GLFTRoot = gltf.scene;
+         //console.log("gltf scene file!");
+         //console.log(GLTFRoot);
+         //var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
 
-          //box.traverse((child) => {
+          //});
+
+          //GLTFRoot.traverse((child) => {
             //if (child.isMesh) child.material = maskMat;
            //console.log("gltf model found:");
            //console.log(child);
             //});
           //scene.add(box);
-       //this.el.addEventListener("model-loaded", (e)=>{
-         //var obj = this.el.getObject3D('mesh');
-         //var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
+       this.el.addEventListener("model-loaded", (e)=>{
+         var obj = this.el.getObject3D('mesh');
+         var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
          //obj.material = maskMat;
          //obj.material.needsUpdate = true;
-         //console.log("gltf object found!");
-         //console.log(obj);
-         //this.el.getObject3D('mesh').material = maskMat;
-       //}
+         console.log("gltf root object found!");
+         console.log(obj);
+
+         obj.traverse((child) => {
+           //if (child.isMesh) child.material = maskMat;
+           console.log("gltf model found:");
+           console.log(child);
+         }
+       });
      }
   });
     </script>
@@ -51,6 +57,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
