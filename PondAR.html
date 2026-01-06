@@ -17,6 +17,7 @@
          obj.material.needsUpdate = true;
          console.log("gltf object found!");
          console.log(obj);
+         this.el.getObject3D('mesh').material = maskMat;
       })
      }
   });
@@ -36,6 +37,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
