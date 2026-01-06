@@ -12,9 +12,9 @@
        console.log("cloak function initiated!");
        let loader = new THREE.GLTFLoader();
        loader.load('https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb', (gltf) => {
-         let box = gltf.scene;
+         let GLFTRoot = gltf.scene;
          console.log("gltf scene file!");
-         console.log(box);
+         console.log(GLTFRoot);
          var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
           });
 
@@ -51,6 +51,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
