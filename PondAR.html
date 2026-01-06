@@ -10,21 +10,8 @@
   AFRAME.registerComponent('cloak', {
      init: function() {
        console.log("cloak function initiated! (1)");
-       //let loader = new THREE.GLTFLoader();
-       //loader.load('https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb', (gltf) => {
-         //let GLFTRoot = gltf.scene;
-         //console.log("gltf scene file!");
-         //console.log(GLTFRoot);
-         //var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
+      var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
 
-          //});
-
-          //GLTFRoot.traverse((child) => {
-            //if (child.isMesh) child.material = maskMat;
-           //console.log("gltf model found:");
-           //console.log(child);
-            //});
-          //scene.add(box);
        this.el.addEventListener("model-loaded", (e)=>{
          var obj = this.el.getObject3D('mesh');
          var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
@@ -34,7 +21,7 @@
          console.log(obj);
 
          obj.traverse((child) => {
-           //if (child.isMesh) child.material = maskMat;
+           if (child.isMesh) child.material = maskMat;
            console.log("gltf model found:");
            console.log(child);
          });
@@ -57,6 +44,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
