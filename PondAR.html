@@ -16,12 +16,6 @@
          console.log("gltf scene file!");
          console.log(box);
          var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
-         box.traverse((child) => {
-            if (child.isMesh) child.material = maskMat;
-           console.log("gltf model found:");
-           console.log(child);
-            });
-          scene.add(box);
           });
        //this.el.addEventListener("model-loaded", (e)=>{
          //var obj = this.el.getObject3D('mesh');
@@ -48,6 +42,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
