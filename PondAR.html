@@ -15,11 +15,8 @@
        this.el.addEventListener("model-loaded", (e)=>{
          var obj = this.el.getObject3D('mesh');
          var maskMat = new THREE.MeshBasicMaterial({color: 0xFF0000});
-         //obj.material = maskMat;
-         //obj.material.needsUpdate = true;
          console.log("gltf root object found!");
          console.log(obj);
-
          obj.traverse((child) => {
            if (child.isMesh) child.material = maskMat;
            console.log("gltf model found:");
@@ -44,6 +41,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
