@@ -9,10 +9,10 @@
     <script>
   AFRAME.registerComponent('cloak', {
      init: function() {
+       var maskMat = new THREE.MeshBasicMaterial({color: 0x110000});
        console.log("cloak function initiated! (1)");
        this.el.addEventListener("model-loaded", (e)=>{
          var obj = this.el.getObject3D('mesh');
-         var maskMat = new THREE.MeshBasicMaterial({color: 0x110000});
          obj.traverse((child) => {
            if (child.isMesh) child.material = maskMat;
            console.log("gltf model found:");
@@ -37,6 +37,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
