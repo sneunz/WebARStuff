@@ -10,7 +10,7 @@
   AFRAME.registerComponent('cloak', {
      init: function() {
        var maskMat = new THREE.MeshBasicMaterial({colorWrite: false});
-       var geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
+       var geometry = new THREE.BoxGeometry( 4, 4, 4 );
        var cubeMask = new THREE.Mesh( geometry, maskMat );
        this.el.object3D.add( cubeMask );
        console.log("cloak function initiated! (1)");
@@ -40,6 +40,7 @@
     </a-scene>
   </body>
 </html>
+
 
 
 
