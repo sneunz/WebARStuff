@@ -28,6 +28,7 @@
     <a-scene mindar-image="imageTargetSrc: https://sneunz.github.io/WebARStuff/FileStorage/ImageTargets/hitchhikers_target.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" render-order="mask, main">
       <a-assets>
         <a-asset-item id="pondModel" src="https://sneunz.github.io/WebARStuff/FileStorage/Pond.glb"></a-asset-item>
+        <a-asset-item id="pond_side1" src="https://sneunz.github.io/WebARStuff/FileStorage/Pond_side1.glb"></a-asset-item>
         <a-asset-item id="pondShadow" src="https://sneunz.github.io/WebARStuff/FileStorage/Pond_NoAnim_shadow.glb"></a-asset-item>
         <a-asset-item id="pondMask" src="https://sneunz.github.io/WebARStuff/FileStorage/Mask.glb"></a-asset-item>
         <a-asset-item id="testSphere" src="https://sneunz.github.io/WebARStuff/FileStorage/TestSphere.glb"></a-asset-item>
@@ -43,10 +44,12 @@
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block3" render-order="main" cloak></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block4" render-order="main" cloak></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="loop:repeat" src="#pondModel" material="side: back; opacity: 0.9" render-order="main"></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block4" render-order="pond_side1"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
 </html>
+
 
 
 
