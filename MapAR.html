@@ -11,18 +11,13 @@
       <a-assets>
         <a-asset-item id="part1" src="https://sneunz.github.io/WebARStuff/FileStorage/Part1.glb"></a-asset-item>
         <a-asset-item id="part2" src="https://sneunz.github.io/WebARStuff/FileStorage/Part2.glb"></a-asset-item>
-        <a-asset-item id="kayaker" src="https://sneunz.github.io/WebARStuff/FileStorage/Kayaker.glb"></a-asset-item>
-        <a-asset-item id="foam" src="https://sneunz.github.io/WebARStuff/FileStorage/Foam.glb"></a-asset-item>
-        <a-asset-item id="foam" src="https://sneunz.github.io/WebARStuff/FileStorage/Bird1.glb"></a-asset-item>
+        <a-asset-item id="water" src="https://sneunz.github.io/WebARStuff/FileStorage/WaterPlane.glb"></a-asset-item>
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#part1"></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#part2"></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#foam"></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="loop:repeat" src="#bird" material="side: back; opacity: 0.9" render-order="999"></a-gltf-model>
-        <!-- <a-gltf-model scale="0.5 0.5 0.5" animation-mixer="loop:repeat" src="#bird"></a-gltf-model> -->
-        <!-- <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#kayaker" animation-mixer="clip:*; loop:repeat"></a-gltf-model> -->
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#water"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
