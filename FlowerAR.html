@@ -4,7 +4,24 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
-  <body>    
+  <body>
+        <script>
+  AFRAME.registerComponent('cloak', {
+     init: function() {
+       var maskMat = new THREE.MeshBasicMaterial({colorWrite: false});
+       console.log("cloak function initiated! (1)");
+       this.el.addEventListener("model-loaded", (e)=>{
+         var obj = this.el.getObject3D('mesh');
+         obj.traverse((child) => {
+           if (child.isMesh) child.material = maskMat;
+           console.log("gltf model found:");
+           console.log(child);
+         });
+       });
+     }
+  });
+    </script>
+    
     <a-scene mindar-image="imageTargetSrc: https://sneunz.github.io/WebARStuff/FileStorage/ImageTargets/Teller.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" render-order="mask, main">
       <a-assets>
       <a-asset-item id="butterfly" src="https://sneunz.github.io/WebARStuff/FileStorage/Flower/Butterfly.glb"></a-asset-item>
