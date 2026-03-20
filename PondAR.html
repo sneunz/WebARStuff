@@ -27,7 +27,7 @@
     </script>
     <a-scene mindar-image="imageTargetSrc: https://sneunz.github.io/WebARStuff/FileStorage/ImageTargets/Teller.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" render-order="mask, main">
       <a-assets>
-        <a-asset-item id="pondModel" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/Pond.glb"></a-asset-item>
+        <!-- <a-asset-item id="pondModel" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/Pond.glb"></a-asset-item>
         <a-asset-item id="pond_side1" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/Pond_side1.glb"></a-asset-item>
         <a-asset-item id="pondShadow" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/Pond_NoAnim_shadow.glb"></a-asset-item>
         <a-asset-item id="pondMask" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/Mask.glb"></a-asset-item>
@@ -37,17 +37,19 @@
         <a-asset-item id="block3" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/MaskBlock3.glb"></a-asset-item>
         <a-asset-item id="block4" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/MaskBlock4.glb"></a-asset-item>
         <a-asset-item id="block5" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/MaskBlock5.glb"></a-asset-item>
-        <a-asset-item id="block6" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/MaskBlock6.glb"></a-asset-item>
+        <a-asset-item id="block6" src="https://sneunz.github.io/WebARStuff/FileStorage/PondModels/MaskBlock6.glb"></a-asset-item> -->
+        <a-asset-item id="butterfly" src="https://sneunz.github.io/WebARStuff/FileStorage/Flower/Butterfly_Flap.glb"></a-asset-item>
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="loop:repeat" src="#pondModel" material="side: back; opacity: 0.9" render-order="999"></a-gltf-model>
+        <!-- <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="loop:repeat" src="#pondModel" material="side: back; opacity: 0.9" render-order="999"></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block1" render-order="9" depthWrite = false cloak></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block2" render-order="9" cloak></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block3" render-order="9" cloak></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block4" render-order="9" cloak></a-gltf-model>
         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block5" render-order="9" cloak></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block6" render-order="9" cloak></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#block6" render-order="9" cloak></a-gltf-model> -->
+         <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="loop:repeat" src="#butterfly" material="side: back; opacity: 0.9" render-order="999"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
