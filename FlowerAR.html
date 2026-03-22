@@ -1,18 +1,18 @@
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-    <!-- <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-  </head>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.0/dist/aframe-extras.min.js"></script>
+</head>
   <body>    
-    <a-scene mindar-image="imageTargetSrc: https://sneunz.github.io/WebARStuff/FileStorage/ImageTargets/Teller.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" render-order="mask, main">
+    <a-scene mindar-image="imageTargetSrc: https://sneunz.github.io/WebARStuff/FileStorage/ImageTargets/FlowerTarget.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" render-order="mask, main">
       <a-assets>
       <a-asset-item id="butterfly" src="https://sneunz.github.io/WebARStuff/FileStorage/Flower/Butterfly_Flap.glb"></a-asset-item>
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="clip:*; loop:repeat" src="#butterfly" material="side: back; opacity: 1"></a-gltf-model>
+        <a-gltf-model position="0 0 0" scale="0.1 0.1 0.1" animation-mixer="loop:repeat" src="#butterfly" material="side: back; opacity: 1"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
